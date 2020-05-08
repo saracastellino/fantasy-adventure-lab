@@ -1,5 +1,6 @@
 package RoleTests;
 
+import Entities.Roles.Attackers.Knight;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,13 +13,18 @@ public class KnightTest {
 
     @Before
     public void before() {
-        knight = new Knight();
+        knight = new Knight("Sir Wilfred");
     }
 
     @Test
     public void hasProperties() {
-        assertNotNull(knight.getWeapon());
-        assertEquals(0, 0);
+        assertNotNull(knight.getCurrentWeapon());
+        assertNotNull(knight.getArmour());
+
+        assertEquals(6, knight.getAttackLevel());
+        assertEquals(5, knight.getDefenceLevel());
+        assertEquals(50, knight.getHealthLevel());
+        assertEquals(7, knight.getRecoveryLevel());
     }
 
 }

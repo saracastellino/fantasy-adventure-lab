@@ -7,8 +7,8 @@ public enum Weapon {
     BROAD_SWORD("Broad Sword", 3),
     AXE("Axe", 4);
 
-    private final String type;
-    private final int attackModifier;
+    protected final String type;
+    protected final int attackModifier;
 
     Weapon(String type, int attackModifier) {
         this.type = type;

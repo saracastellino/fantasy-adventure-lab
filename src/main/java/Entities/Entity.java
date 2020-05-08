@@ -2,16 +2,13 @@ package Entities;
 
 public abstract class Entity {
 
-    private String name;
-    private int healthLevel;
-    private int attackLevel;
-    private int defenceLevel;
+    protected String name;
+    protected int healthLevel;
+    protected int attackLevel;
+    protected int defenceLevel;
 
-    public Entity(String name, int healthLevel, int attackLevel, int defenceLevel) {
+    public Entity(String name) {
         this.name = name;
-        this.healthLevel = healthLevel;
-        this.attackLevel = attackLevel;
-        this.defenceLevel = defenceLevel;
     }
 
     public String getName() {
@@ -28,5 +25,17 @@ public abstract class Entity {
 
     public int getDefenceLevel() {
         return defenceLevel;
+    }
+
+    public void setHealthLevel(int healthLevel) {
+        this.healthLevel = healthLevel;
+    }
+
+    public void setAttackLevel(int attackLevel) {
+        this.attackLevel = attackLevel;
+    }
+
+    public void setDefenceLevel(int defenceLevel) {
+        this.defenceLevel = defenceLevel;
     }
 }
