@@ -17,6 +17,3 @@
 out/
 target/
 .idea_modules/
-src/main/java/ItemsAndCreatures/
-src/main/resources/
-src/test/
