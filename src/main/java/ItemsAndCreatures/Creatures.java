@@ -1,6 +1,8 @@
 package ItemsAndCreatures;
 
-public enum Creatures {
+import ItemsAndCreatures.Behaviours.ITreasure;
+
+public enum Creatures  implements ITreasure {
 
     DRAGON("Dragon", 4),
     GRIFFIN("Griffin", 3),

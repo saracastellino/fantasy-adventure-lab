@@ -1,6 +1,8 @@
 package ItemsAndCreatures;
 
-public enum Potions {
+import ItemsAndCreatures.Behaviours.ITreasure;
+
+public enum Potions  implements ITreasure {
 
     CHOCKING_POTION("Chocking potion", 8, 0),
     HEALING_POTION("Healing potion", 0, 4),

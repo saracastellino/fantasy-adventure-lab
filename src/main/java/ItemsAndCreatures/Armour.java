@@ -1,6 +1,10 @@
 package ItemsAndCreatures;
 
-public enum Armour {
+import ItemsAndCreatures.Behaviours.ITreasure;
+
+import java.util.ArrayList;
+
+public enum Armour implements ITreasure {
 
     LIGHT_ARMOUR("Light Armour", 1),
     CHAINMAIL_ARMOUR("Chainmail Armour", 2),
@@ -22,4 +26,5 @@ public enum Armour {
     public int getDefenceModifier() {
         return defenceModifier;
     }
+
 }

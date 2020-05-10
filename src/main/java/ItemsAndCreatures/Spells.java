@@ -1,6 +1,8 @@
 package ItemsAndCreatures;
 
-public enum Spells {
+import ItemsAndCreatures.Behaviours.ITreasure;
+
+public enum Spells  implements ITreasure {
 
     ACID_SPLASH("Acid Splash", 3),
     ANIMAL_SHAPE("Animal Shape", 2),

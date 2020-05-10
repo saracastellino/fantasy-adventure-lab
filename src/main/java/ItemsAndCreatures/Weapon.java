@@ -1,6 +1,8 @@
 package ItemsAndCreatures;
 
-public enum Weapon {
+import ItemsAndCreatures.Behaviours.ITreasure;
+
+public enum Weapon implements ITreasure {
 
     DAGGER("Dagger", 1),
     SHORT_SWORD("Short Sword", 2),
