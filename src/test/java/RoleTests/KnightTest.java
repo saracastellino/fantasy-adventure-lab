@@ -25,7 +25,7 @@ public class KnightTest {
     }
 
     @Test
-    public void canFight(){
+    public void canFight() {
         knight.fight(enemy);
         assertEquals(0, enemy.getHealthLevel());
         assertEquals(9, knight.getHealthLevel());

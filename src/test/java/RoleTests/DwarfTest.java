@@ -26,7 +26,7 @@ public class DwarfTest {
     }
 
     @Test
-    public void canFight(){
+    public void canFight() {
         dwarf.fight(enemy);
         assertEquals(0, enemy.getHealthLevel());
         assertEquals(10, dwarf.getHealthLevel());
