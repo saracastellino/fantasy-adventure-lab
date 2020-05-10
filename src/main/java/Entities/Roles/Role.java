@@ -24,6 +24,7 @@ public abstract class Role extends Entity {
     }
 
     public void takeTreasure(Room room, ITreasure treasure) {
+        room.add(treasure);
         ITreasure takenTreasure = room.remove();
         roleTreasures.put(takenTreasure.getType(), takenTreasure);
     }

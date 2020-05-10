@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Room {
 
-    private ArrayList<ITreasure> roomTreasures;
+    public ArrayList<ITreasure> roomTreasures;
 
     public Room() {
         this.roomTreasures = new ArrayList<ITreasure>();
@@ -22,7 +22,7 @@ public class Room {
         this.roomTreasures.add(treasure);
     }
 
-    public void remove(ITreasure treasure) {
-        this.roomTreasures.remove(treasure);
+    public ITreasure remove() {
+       return this.roomTreasures.remove(0);
     }
 }

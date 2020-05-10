@@ -48,16 +48,11 @@ public class RoomTest {
     @Test
     public void canRemoveTrasure() {
         room.add(spell);
-        room.remove(spell);
+        room.remove();
         assertEquals(0, room.getTreasures().size());
     }
 
-//    @Test
-//    public void roleCanTakeTreasure() {
-//        room.add(weapon);
-//        knight.takeTreasure(weapon);
-//        assertEquals(0, room.getTreasures().size());
-//    }
+
 
 
 }
