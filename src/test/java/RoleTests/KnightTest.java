@@ -11,20 +11,20 @@ public class KnightTest {
 
     private Knight knight;
 
-    @Before
-    public void before() {
-        knight = new Knight("Sir Wilfred");
-    }
-
-    @Test
-    public void hasProperties() {
-        assertNotNull(knight.getCurrentWeapon());
-        assertNotNull(knight.getArmour());
-
-        assertEquals(6, knight.getAttackLevel());
-        assertEquals(5, knight.getDefenceLevel());
-        assertEquals(50, knight.getHealthLevel());
-        assertEquals(7, knight.getRecoveryLevel());
-    }
+//    @Before
+//    public void before() {
+//        knight = new Knight("Sir Wilfred");
+//    }
+//
+//    @Test
+//    public void hasProperties() {
+//        assertNotNull(knight.getCurrentWeapon());
+//        assertNotNull(knight.getArmour());
+//
+//        assertEquals(6, knight.getAttackLevel());
+//        assertEquals(5, knight.getDefenceLevel());
+//        assertEquals(50, knight.getHealthLevel());
+//        assertEquals(7, knight.getRecoveryLevel());
+//    }
 
 }

@@ -1,14 +1,19 @@
 package Entities;
 
-public abstract class Entity {
+import Entities.Behaviours.IFight;
+
+public abstract class Entity implements IFight {
 
     protected String name;
     protected int healthLevel;
     protected int attackLevel;
     protected int defenceLevel;
 
-    public Entity(String name) {
+    public Entity(String name, int healthLevel, int attackLevel, int defenceLevel) {
         this.name = name;
+        this.healthLevel = healthLevel;
+        this.attackLevel = attackLevel;
+        this.defenceLevel = defenceLevel;
     }
 
     public String getName() {
@@ -27,6 +32,10 @@ public abstract class Entity {
         return defenceLevel;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void setHealthLevel(int healthLevel) {
         this.healthLevel = healthLevel;
     }
@@ -38,4 +47,6 @@ public abstract class Entity {
     public void setDefenceLevel(int defenceLevel) {
         this.defenceLevel = defenceLevel;
     }
+
+
 }
