@@ -13,18 +13,19 @@ import static org.junit.Assert.assertEquals;
 public class BarbarianTest {
 
     Barbarian barbarian;
-    Entity rival;
+    Entity enemy;
 
     @Before
     public void before(){
         barbarian = new Barbarian("Conan", 10, 10, 8,  Weapon.BROAD_SWORD, Armour.STEEL_ARMOUR);
-        rival = new Orc("Wiuch", 8, 7, 5);
+        enemy = new Orc("Wiuch", 8, 7, 5);
     }
 
     @Test
     public void canFight(){
-        barbarian.fight(rival);
-        assertEquals(0, rival.getHealthLevel());
+        barbarian.fight(enemy);
+        assertEquals(0, enemy.getHealthLevel());
+        assertEquals(10, barbarian.getHealthLevel());
     }
 
 }

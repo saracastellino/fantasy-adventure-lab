@@ -1,5 +1,6 @@
 package Entities.Roles.Healers;
 
+import Entities.Behaviours.IFight;
 import Entities.Entity;
 import Entities.Roles.Attackers.Attacker;
 import Entities.Roles.Role;
@@ -9,7 +10,7 @@ import ItemsAndCreatures.Weapon;
 
 import java.util.HashMap;
 
-public class Cleric extends Role {
+public class Cleric extends Role implements IFight {
 
 
     private HashMap<String, Potions> potions;

@@ -1,13 +1,14 @@
 package Entities.Roles.Attackers;
 
-
+import Entities.Behaviours.IFight;
+import Entities.Entity;
 import Entities.Roles.Role;
 import ItemsAndCreatures.Armour;
 import ItemsAndCreatures.Weapon;
 
 import java.util.HashMap;
 
-public abstract class Attacker extends Role {
+public abstract class Attacker extends Role implements IFight {
 
     private HashMap<String, Weapon> weapons;
     private Weapon currentWeapon;
@@ -37,5 +38,13 @@ public abstract class Attacker extends Role {
         currentWeapon = foundWeapon;
     }
 
+    public void fight(Entity rival) {
+        int extraAttackLevel = this.attackLevel + this.getArmour().getDefenceModifier() + this.getCurrentWeapon().getAttackModifier();
+        if (extraAttackLevel > rival.getDefenceLevel()) {
+            rival.setHealthLevel(0);
+        } else {
+            this.healthLevel = 0;
+        }
+    }
 
 }

@@ -2,7 +2,7 @@ package Entities;
 
 import Entities.Behaviours.IFight;
 
-public abstract class Entity implements IFight {
+public abstract class Entity {
 
     protected String name;
     protected int healthLevel;
