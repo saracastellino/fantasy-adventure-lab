@@ -1,24 +1,28 @@
 package Rooms;
 
 import ItemsAndCreatures.Behaviours.ITreasure;
+import ItemsAndCreatures.Spells;
 import com.sun.tools.javac.jvm.Items;
 
 import java.util.ArrayList;
 
 public class Room {
 
-    private ArrayList<ITreasure> treasures;
+    private ArrayList<ITreasure> roomTreasures;
 
     public Room() {
-        this.treasures = new ArrayList<ITreasure>();
+        this.roomTreasures = new ArrayList<ITreasure>();
     }
 
     public ArrayList<ITreasure> getTreasures() {
-        return treasures;
+        return roomTreasures;
     }
 
     public void add(ITreasure treasure) {
-        this.treasures.add(treasure);
+        this.roomTreasures.add(treasure);
     }
 
+    public void remove(ITreasure treasure) {
+        this.roomTreasures.remove(treasure);
+    }
 }

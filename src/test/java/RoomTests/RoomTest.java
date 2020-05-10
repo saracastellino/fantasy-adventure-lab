@@ -1,9 +1,11 @@
 package RoomTests;
 
+import Entities.Roles.Attackers.Knight;
+import Entities.Roles.Role;
+import ItemsAndCreatures.*;
 import ItemsAndCreatures.Behaviours.ITreasure;
-import ItemsAndCreatures.Potions;
-import ItemsAndCreatures.Spells;
 import Rooms.Room;
+import com.sun.org.apache.xml.internal.security.keys.content.KeyName;
 import com.sun.tools.javac.jvm.Items;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,15 +17,17 @@ import static org.junit.Assert.assertEquals;
 public class RoomTest {
 
     Room room;
-    ITreasure armour;
-    ITreasure creature;
-    ITreasure weapon;
+    Armour armour;
+    Creatures creature;
+    Weapon weapon;
     Potions potion;
     Spells spell;
-    
+    Role knight;
+
     @Before
     public void before(){
         room = new Room();
+        knight = new Knight("Lancelot", 9, 8, 8, Weapon.DAGGER, Armour.THICK_STEEL_ARMOUR);
     }
 
     @Test
@@ -40,6 +44,20 @@ public class RoomTest {
         room.add(spell);
         assertEquals(5, room.getTreasures().size());
     }
+
+    @Test
+    public void canRemoveTrasure() {
+        room.add(spell);
+        room.remove(spell);
+        assertEquals(0, room.getTreasures().size());
+    }
+
+//    @Test
+//    public void roleCanTakeTreasure() {
+//        room.add(weapon);
+//        knight.takeTreasure(weapon);
+//        assertEquals(0, room.getTreasures().size());
+//    }
 
 
 }
