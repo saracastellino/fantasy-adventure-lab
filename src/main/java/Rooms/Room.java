@@ -22,7 +22,7 @@ public class Room {
         this.roomTreasures.add(treasure);
     }
 
-    public ITreasure remove() {
+    public ITreasure remove(ITreasure treasure) {
        return this.roomTreasures.remove(0);
     }
 }

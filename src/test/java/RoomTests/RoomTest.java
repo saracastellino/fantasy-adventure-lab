@@ -51,8 +51,4 @@ public class RoomTest {
         room.remove();
         assertEquals(0, room.getTreasures().size());
     }
-
-
-
-
 }
