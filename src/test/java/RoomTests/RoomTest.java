@@ -1,17 +1,9 @@
 package RoomTests;
-
-import Entities.Roles.Attackers.Knight;
 import Entities.Roles.Role;
 import ItemsAndCreatures.*;
-import ItemsAndCreatures.Behaviours.ITreasure;
 import Rooms.Room;
-import com.sun.org.apache.xml.internal.security.keys.content.KeyName;
-import com.sun.tools.javac.jvm.Items;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
 public class RoomTest {
@@ -22,17 +14,15 @@ public class RoomTest {
     Weapon weapon;
     Potions potion;
     Spells spell;
-    Role knight;
 
     @Before
     public void before(){
         room = new Room();
-        knight = new Knight("Lancelot", 9, 8, 8, Weapon.DAGGER, Armour.THICK_STEEL_ARMOUR);
     }
 
     @Test
     public void canCountTreasures() {
-        assertEquals(0, room.getTreasures().size());
+        assertEquals(0, room.roomTreasures.size());
     }
 
     @Test
@@ -42,13 +32,13 @@ public class RoomTest {
         room.add(weapon);
         room.add(potion);
         room.add(spell);
-        assertEquals(5, room.getTreasures().size());
+        assertEquals(5, room.roomTreasures.size());
     }
 
     @Test
     public void canRemoveTrasure() {
         room.add(spell);
-        room.remove();
-        assertEquals(0, room.getTreasures().size());
+        room.remove(spell);
+        assertEquals(0, room.roomTreasures.size());
     }
 }

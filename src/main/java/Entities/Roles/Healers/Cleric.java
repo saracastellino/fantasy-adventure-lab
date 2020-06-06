@@ -5,8 +5,6 @@ import Entities.Entity;
 import Entities.Roles.Role;
 import ItemsAndCreatures.Potions;
 
-import java.util.HashMap;
-
 public class Cleric extends Role implements IFight {
 
     private Potions potion;

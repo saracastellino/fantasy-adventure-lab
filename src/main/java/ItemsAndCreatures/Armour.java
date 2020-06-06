@@ -2,8 +2,6 @@ package ItemsAndCreatures;
 
 import ItemsAndCreatures.Behaviours.ITreasure;
 
-import java.util.ArrayList;
-
 public enum Armour implements ITreasure {
 
     LIGHT_ARMOUR("Light Armour", 1),

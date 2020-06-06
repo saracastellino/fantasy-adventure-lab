@@ -1,11 +1,7 @@
 package Entities.Roles;
 
-import Entities.Behaviours.IFight;
-import Entities.Enemies.Enemy;
 import Entities.Entity;
 import ItemsAndCreatures.Behaviours.ITreasure;
-import ItemsAndCreatures.Potions;
-import ItemsAndCreatures.Weapon;
 import Rooms.Room;
 
 import java.util.HashMap;
@@ -25,7 +21,7 @@ public abstract class Role extends Entity {
 
     public void takeTreasure(Room room, ITreasure treasure) {
         room.add(treasure);
-        ITreasure takenTreasure = room.remove();
+        ITreasure takenTreasure = room.remove(treasure);
         roleTreasures.put(takenTreasure.getType(), takenTreasure);
     }
 

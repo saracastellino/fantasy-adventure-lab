@@ -41,7 +41,7 @@ public class ClericTest {
 
     @Test
     public void hasTreasures() {
-        assertTrue(cleric.roleTreasures.isEmpty());
+        assertEquals(0, cleric.getRoleTreasures().size());
     }
 
     @Test

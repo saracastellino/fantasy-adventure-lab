@@ -1,8 +1,6 @@
 package Rooms;
 
 import ItemsAndCreatures.Behaviours.ITreasure;
-import ItemsAndCreatures.Spells;
-import com.sun.tools.javac.jvm.Items;
 
 import java.util.ArrayList;
 
